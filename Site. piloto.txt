@@ -1,0 +1,175 @@
+<?php
+$idCategoria = $_GET['id'];
+
+$produtos = array(
+    array(
+
+
+        "id" => 1,
+
+        "categoria" => 1,
+
+        "nome" => "Smartphone",
+
+        "descricao" => "Smartphone Android com tela de 6 polegadas, câmera tripla e bateria de 5000 mAh.",
+        
+        "preco" => 1200.00
+    ),
+
+
+    array(
+
+
+        "id" => 2,
+
+        "categoria" => 1,
+
+        "nome" => "Smartwatch",
+
+        "descricao" => "Smartwatch com monitoramento de frequência cardíaca, GPS e tela AMOLED.",
+
+        "preco" => 800.00
+    ),
+
+
+    array(
+
+
+        "id" => 3,
+
+        "categoria" => 2,
+
+        "nome" => "Geladeira",
+
+        "descricao" => "Geladeira duplex com capacidade de 300 litros e baixo consumo de energia.",
+
+        "preco" => 2500.00
+    ),
+
+
+
+    array(
+
+
+
+        "id" => 4,
+
+        "categoria" => 2,
+
+        "nome" => "Fogão",
+
+        "descricao" => "Fogão 5 bocas com mesa de vidro temperado e acendimento automático.",
+
+        "preco" => 1000.00
+    ),
+
+
+
+    array(
+
+
+
+        "id" => 5,
+
+        "categoria" => 3,
+
+        "nome" => "Notebook",
+
+        "descricao" => "Notebook com processador Intel Core i9, 8GB de RAM e SSD de 256GB.",
+
+        "preco" => 3500.00
+    ),
+
+
+
+    array(
+
+
+
+        "id" => 6,
+
+        "categoria" => 3,
+
+        "nome" => "Tablet",
+
+        "descricao" => "Tablet com tela de 10 polegadas, processador octa-core e 64GB de armazenamento.",
+
+        "preco" => 1500.00
+    )
+
+
+
+);
+
+foreach ($produtos as $produto) {
+
+
+
+    if ($produto["categoria"] == $idCategoria) {
+
+
+
+        echo "<div class='produto'>";
+
+        echo "<h3>" . $produto["nome"] . "</h3>";
+
+        echo "<p>" . $produto["descricao"] . "</p>";
+
+        echo "<p>Preço: R$ " . number_format($produto["preco"], 2, ",", ".") . "</p>";
+
+        echo "</div>";
+
+
+    }
+
+
+
+}
+?>  
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------
+
+
+<!DOCTYPE html>
+
+
+
+<html lang="pt-br">
+
+
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Virtual - Pampstore</title>
+
+
+</head>
+
+
+<body>
+
+
+    <h1>Loja Virtual</h1>
+    <p>Bem-vindo a Pamps store!!!</p>
+    <p>Aqui você pode navegar pelas categorias de produtos e visualizar nossa variedade em estoque e a pronta entrega .</p>
+    <h2>Categorias</h2>
+    <ul>
+        <li><a href="categoria.php?id=1">Eletrônicos</a></li>
+        <li><a href="categoria.php?id=2">Eletrodomésticos</a></li>
+        <li><a href="categoria.php?id=3">Informática</a></li>
+    </ul>
+</body>
+</html>
+
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizzaria Delícia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Pampers Pizza</h1>
+    <p>Fenomeno de Bauru</p>
+  </header>
+  <main>
+    <section id="entrega">
+      <h2>Raio de Entrega</h2>
+      <p>Atendemos a um raio de **5 km** da pizzaria.</p>
+      <p>Insira seu CEP para verificar se está na área de entrega:</p>
+      <input type="text" id="cep" placeholder="Digite seu CEP">
+      <button onclick="verificarEntrega()">Verificar</button>
+    </section>
+    <section id="montar-pizza">
+      <h2>Monte sua Pizza</h2>
+      <h3>1. Escolha o Tamanho</h3>
+      <ul>
+        <li><input type="radio" name="tamanho" id="pequena" value="pequena"> <label for="pequena">Pequena (30 cm): R$ 20,00</label></li>
+        <li><input type="radio" name="tamanho" id="media" value="media"> <label for="media">Média (35 cm): R$ 25,00</label></li>
+        <li><input type="radio" name="tamanho" id="grande" value="grande"> <label for="grande">Grande (40 cm): R$ 30,00</label></li>
+      </ul>
+      <h3>2. Escolha a Massa</h3>
+      <ul>
+        <li><input type="radio" name="massa" id="tradicional" value="tradicional"> <label for="tradicional">Tradicional: Fina e crocante.</label></li>
+        <li><input type="radio" name="massa" id="borda-recheada" value="borda-recheada"> <label for="borda-recheada">Borda Recheada: Catupiry, Cheddar ou Requeijão (R$ 5,00 adicional).</label></li>
+      </ul>
+      <h3>3. Escolha os Sabores</h3>
+      <p>Até 2 sabores: Sem custo adicional.</p>
+      <p>3 Sabores: R$ 3,00 adicional.</p>
+      <p>4 Sabores: R$ 5,00 adicional.</p>
+      <ul class="sabores">
+        <li><input type="checkbox" name="sabor" id="margherita" value="margherita"> <label for="margherita">Margherita (M)</label></li>
+        <li><input type="checkbox" name="sabor" id="pepperoni" value="pepperoni"> <label for="pepperoni">Pepperoni (P)</label></li>
+        <li><input type="checkbox" name="sabor" id="quatro-queijos" value="quatro-queijos"> <label for="quatro-queijos">Quatro Queijos (QQ)</label></li>
+        <li><input type="checkbox" name="sabor" id="calabresa" value="calabresa"> <label for="calabresa">Calabresa (C)</label></li>
+        </ul>
+      <h3>4. Adicione Opcionais</h3>
+      <ul class="opcionais">
+        <li><input type="checkbox" name="opcional" id="extrato" value="extrato"> <label for="extrato">Extrato de tomate: R$ 2,00</label></li>
+        <li><input type="checkbox" name="opcional" id="oregano" value="oregano"> <label for="oregano">Orégano: R$ 1,00</label></li>
+        <li><input type="checkbox" name="opcional" id="azeitonas" value="azeitonas"> <label for="azeitonas">Azeitonas: R$ 1,00</label></li>
+        </ul>
+      <button onclick="calcularTotal()">Calcular Total</button>
+    
