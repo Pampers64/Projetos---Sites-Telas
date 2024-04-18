@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site de Vídeos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        </header>
+
+    <main>
+        <section class="video-principal">
+            </section>
+
+        <section class="lista-videos">
+            </section>
+
+        <aside>
+            </aside>
+    </main>
+
+    <footer>
+        </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+======
+CSS
+
+/* Estilos para o layout geral, cores, fontes, etc. */
+
+header {
+    /* Estilos para o cabeçalho */
+}
+
+main {
+    /* Estilos para o conteúdo principal */
+    display: flex; /* Layout flexbox para organizar as seções */
+}
+
+.video-principal {
+    /* Estilos para o vídeo em destaque */
+    flex: 2; /* Ocupa 2 partes do espaço disponível */
+}
+
+.lista-videos {
+    /* Estilos para a lista de vídeos */
+    flex: 1; /* Ocupa 1 parte do espaço disponível */
+}
+
+aside {
+    /* Estilos para a barra lateral */
+    width: 200px; /* Largura fixa */
+}
+
+footer {
+    /* Estilos para o rodapé */
+}
+======
+JAVA SCRIPT
+
+
+// Funções para carregar e reproduzir vídeos
+// Funções para interações com o usuário (controle de volume, legendas, etc.)
+// Funções para gerenciar listas de reprodução e favoritos
+
+// Exemplo: Carregar vídeo em destaque
+const videoPrincipal = document.querySelector('.video-principal video');
+videoPrincipal.src = 'https://meuvideo.mp4';
+
+// Exemplo: Adicionar evento de clique para pausar/reproduzir vídeo
+videoPrincipal.addEventListener('click', () => {
+    if (videoPrincipal.paused) {
+        videoPrincipal.play();
+    } else {
+        videoPrincipal.pause();
+    }
+});
